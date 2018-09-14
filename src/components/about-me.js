@@ -15,7 +15,7 @@ class Aboutme extends Component {
 					throughout my life.  After working with a friend of mine to create and manage a software
 					infrastructure for a IT hardware recycling facility (Akooba Inc.) for a year and a half,
 					I filled in my knowledge with Thinkful's online program and now am ready to solve problems
-					as a software developer.
+					professionally as a software developer.
 			</div>
 		);
 	}
