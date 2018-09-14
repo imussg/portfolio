@@ -10,7 +10,7 @@ class Aboutme extends Component {
 					<h1 className="about-me-title">
 						About Me
 					</h1>
-					<img src={picture} />
+					<img className="about-me-pic"src={picture} />
 					I got my start in programming at age 11 continuing to dabble (though never professionally)
 					throughout my life.  After working with a friend of mine to create and manage a software
 					infrastructure for a IT hardware recycling facility (Akooba Inc.) for a year and a half,

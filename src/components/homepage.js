@@ -10,9 +10,14 @@ class Homepage extends Component {
 	render() {
 
 		const gardening = {
-			pic: 'https://cdn.wallpapersafari.com/70/83/irvVAd.jpg',
+			pic: <img className="project-pic" src="https://cdn.wallpapersafari.com/70/83/irvVAd.jpg"/>,
 			href: 'https://gardening-client.herokuapp.com/',
 			name: 'Gardening App'
+		};
+		const acceptableLosses = {
+			pic: <img className="project-pic" src={require('../acceptablelosses.png')}/>,
+			href: 'https://acceptable-losses-client.herokuapp.com/',
+			name: 'Bill Paying App'
 		};
 
 		return (
@@ -30,7 +35,14 @@ class Homepage extends Component {
 					</h1>
 					<h3 className="projects-subtitle">All projects fully implemented with server, client, and database logic</h3>
 				</header>
-				<Project picture={gardening.pic} name={gardening.name} href={gardening.href} />
+				<ul className="projects-list">
+					<li className="project">
+						<Project picture={gardening.pic} name={gardening.name} href={gardening.href} />
+					</li>
+					<li className="project">
+						<Project picture={acceptableLosses.pic} name={acceptableLosses.name} href={acceptableLosses.href} />
+					</li>
+				</ul>
 			</div>
 			<div className="about-me-section">
 				<Aboutme />
