@@ -17,7 +17,9 @@ class Homepage extends Component {
 		const acceptableLosses = {
 			pic: <img className="project-pic" src={require('../acceptablelosses.png')}/>,
 			href: 'https://acceptable-losses-client.herokuapp.com/',
-			name: 'Bill Paying App'
+			name: `Bill
+			Paying
+			App`
 		};
 
 		return (
