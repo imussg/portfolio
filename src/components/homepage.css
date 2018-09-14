@@ -1,11 +1,24 @@
 #root {
-  background-image: url('./graffiti.jpg');
+  background-image: url('../graffiti.jpg');
 }
+.app-page {
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: rgba(34, 34, 34, .5);
+  transition: background-color 1s;
+}
+.app-page:hover {
+  background-color: rgba(34, 34, 34, .8);
+}
+
 .intro {
-  background-color: transparent;
-}
-.App {
   text-align: center;
+  color: green;
+  transition: color 1s;
+}
+
+.intro:hover {
+  color: white;
 }
 
 .App-logo {
@@ -13,23 +26,20 @@
   height: 80px;
 }
 
-.App-header {
-  background-color: #222;
+.intro-header {
   height: 150px;
   padding: 20px;
-  color: white;
 }
 
-.App-title {
+.intro-title {
   font-size: 1.5em;
 }
 
-.App-intro {
+h1.projects {
   font-size: large;
 }
-
-.about-me-comp {
-  background-color: lightblue;
+h3 {
+  font-size: inherit;
 }
 
 img {
