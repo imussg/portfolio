@@ -17,34 +17,43 @@ class Homepage extends Component {
 		const acceptableLosses = {
 			pic: <img className="project-pic" src={require('../acceptablelosses.png')}/>,
 			href: 'https://acceptable-losses-client.herokuapp.com/',
-			name: `Bill
-			Paying
-			App`
+			name: 'Bill Paying App'
+		};
+		const learnSpanish = {
+			pic: <img className="project-pic" src={require('../spanish-learning.png')}/>,
+			href: 'https://spacedrep-client-brian-steven.herokuapp.com/',
+			name: 'Learn Spanish'
 		};
 
 		return (
 		<div className="app-page">
 			<div className="intro">
 				<header className="intro-header">
-					<h1 className="intro-title">Steven Imus</h1>
-					<h5 className="intro-subtitle">Software Developer for Node, React, SQL</h5>
+					<h1 className="intro-title"><span className="code-white">Steven Imus</span></h1>
+					<h5 className="intro-subtitle"><span className="code-blue">Software Developer </span><span className="code-red">for</span><span className="code-blue"> Node</span><span className="code-white">, </span><span className="code-blue">React</span><span className="code-white">,</span><span className="code-blue"> SQL</span></h5>
 				</header>
 			</div>
 			<div className="projects">
+
 				<header className="projects-header">
 					<h1 className="projects-title">
 						Full Stack Projects
 					</h1>
 					<h3 className="projects-subtitle">All projects fully implemented with server, client, and database logic</h3>
 				</header>
-				<ul className="projects-list">
-					<li className="project">
-						<Project picture={gardening.pic} name={gardening.name} href={gardening.href} />
-					</li>
-					<li className="project">
-						<Project picture={acceptableLosses.pic} name={acceptableLosses.name} href={acceptableLosses.href} />
-					</li>
-				</ul>
+				<div className="projects-list-div">
+					<ul className="projects-list">
+						<li className="project">
+							<Project picture={gardening.pic} name={gardening.name} href={gardening.href} />
+						</li>
+						<li className="project">
+							<Project picture={acceptableLosses.pic} name={acceptableLosses.name} href={acceptableLosses.href} />
+						</li>
+						<li className="project">
+							<Project picture={learnSpanish.pic} name={learnSpanish.name} href={learnSpanish.href} />
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div className="about-me-section">
 				<Aboutme />
