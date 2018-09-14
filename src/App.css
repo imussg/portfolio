@@ -1,6 +1,3 @@
-#root {
-  background-image: url('./graffiti.jpg');
-}
 .intro {
   background-color: transparent;
 }
@@ -15,7 +12,7 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  /*height: 150px;*/
   padding: 20px;
   color: white;
 }
@@ -27,7 +24,7 @@
 .App-intro {
   font-size: large;
 }
-
+/*
 .about-me-comp {
   background-color: lightblue;
 }
@@ -53,7 +50,7 @@ p.shpeal {
 
 h1.about-me-title {
   text-align: center;
-}
+}*/
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
