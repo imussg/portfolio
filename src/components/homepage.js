@@ -29,7 +29,7 @@ class Homepage extends Component {
 		<div className="app-page">
 			<div className="intro">
 				<header className="intro-header">
-					<h1 className="intro-title"><span className="code-white">Steven Imus</span></h1>
+					<h1 className="intro-title"><span className="code-name">Steven Imus</span></h1>
 					<h5 className="intro-subtitle"><span className="code-blue">Software Developer </span><span className="code-red">for</span><span className="code-blue"> Node</span><span className="code-white">, </span><span className="code-blue">React</span><span className="code-white">,</span><span className="code-blue"> SQL</span></h5>
 				</header>
 			</div>
@@ -37,7 +37,7 @@ class Homepage extends Component {
 
 				<header className="projects-header">
 					<h1 className="projects-title">
-						Full Stack Projects
+						<span className="code-green">Full Stack</span> <span className="code-white">Projects</span>
 					</h1>
 					<h3 className="projects-subtitle">All projects fully implemented with server, client, and database logic</h3>
 				</header>
