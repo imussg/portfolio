@@ -116,6 +116,10 @@ img.project-pic {
   transition: color 1s;
 }
 
+a {
+  text-decoration: none;
+}
+
 .project-link:hover {
   color: #00ff00;
 }
@@ -145,6 +149,20 @@ li {
 
 .about-me-comp:hover {
   color: white;
+}
+
+.about-me-comp a {
+  color: #5252d5;
+  transition: color 1s;
+}
+
+.about-me-comp:hover a {
+  color: #00ff00;
+  transition: color .5s;
+}
+
+.about-me-comp a:hover {
+  color: #ffe200;
 }
 
 h1.about-me-title {
