@@ -39,7 +39,7 @@ class Homepage extends Component {
 					<h1 className="projects-title">
 						<span className="code-green">Full Stack</span> <span className="code-white">Projects</span>
 					</h1>
-					<h3 className="projects-subtitle">All projects fully implemented with server, client, and database logic</h3>
+					<h3 className="projects-subtitle"><span className="code-white">All projects fully implemented with server, client, and database logic</span></h3>
 				</header>
 				<div className="projects-list-div">
 					<ul className="projects-list">
