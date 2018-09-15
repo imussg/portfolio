@@ -120,8 +120,13 @@ a {
   text-decoration: none;
 }
 
-.project-link:hover {
+div.projects:hover div.projects-list-div .project-link {
   color: #00ff00;
+  transition: color .5s;
+}
+
+div.projects div.projects-list-div .project-link:hover {
+  color: #ffe200;
 }
 
 ul {
