@@ -18,6 +18,10 @@ class Aboutme extends Component {
 					of time to find my way back to software development.  After working with a friend of mine to
 					help create and manage software for a IT hardware recycling facility (<a href="https://akooba.com/">Akooba Inc.</a>) for a year and a half,
 					I filled in my knowledge with a course in full-stack development with Thinkful while preparing myself for the job market</p>
+					<p>I have always enjoyed problem solving through computer programming.  Solving logic puzzles and mathematics 
+					was always fun for me, and programming gave me the chance apply that creatively.  I look forward to working with a team of
+					programmers and solve some problems!
+					</p>
 					<p>In my free time I play video games, chess, tennis, and write code to ongoing projects.  Feel free to contact me at imussg@gmail.com
 					and check out <a href="https://github.com/imussg">my github</a> and/or my <a href="https://www.linkedin.com/in/steven-imus-3b3a1a52/">linkedin profile</a></p>
 			</div>
