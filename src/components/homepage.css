@@ -1,14 +1,14 @@
 
 #root {
-  
+  overflow: auto;
 }
 .app-page {
   margin-left: 100px;
   margin-right: 100px;
   background-color: rgba(34, 34, 34, .4);
   transition: background-color 1s;
-  height: auto;
-  padding-bottom: 450px;
+  overflow: auto;
+  /*padding-bottom: 450px;*/
   border: solid black 2px;
   border-radius: 10px;
 }
@@ -21,15 +21,11 @@
   text-align: center;
   color: #00ff00;
   transition: color 1s;
+  overflow: auto;
 }
 
 .intro:hover, .projects:hover {
   color: white;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
 }
 
 .intro-header {
@@ -42,7 +38,6 @@
 }
 
 .projects {
-  text-align: center;
   border-top: 1px black solid;
   border-bottom: 1px black solid;
 }
@@ -52,7 +47,11 @@
   padding-top: 15px;
 }
 .projects-subtitle {
-  font-size: inherit;
+  font-size: .95em;
+}
+
+.project {
+  padding: auto;
 }
 
 img.about-me-pic {
@@ -68,7 +67,7 @@ img.about-me-pic {
 
 .projects-list-div {
   width: auto;
-  min-height: 400px;
+  overflow: auto;
 }
 
 .projects-list {
@@ -132,14 +131,20 @@ div.projects div.projects-list-div .project-link:hover {
 ul {
   list-style: none;
   display: block;
-  height: 100%;
+  height: 0%;
+  float: left;
 }
 
 li {
   width: 30%;
   height: 100%;
   float: left;
-  padding-left: 30px;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+
+div.about-me-section {
+  overflow: auto;
 }
 
 .about-me-comp {
@@ -214,4 +219,35 @@ span.code-green {
 
 img.project-pic:hover, span.code-green:hover {
   background-color: rgba(34, 34, 34, .8);
+}
+
+@media only screen and (max-width: 640px) {
+  ul {
+    padding-left: auto;
+  }
+  li {
+    width: 100%;
+    padding: 0;
+  }
+  .project-container {
+    height: 240px;
+    width: 240px;
+  }
+  .app-page {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .projects-subtitle {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .about-me-comp {
+    max-width: 100%;
+  }
+  img.about-me-pic {
+    margin: 15px;
+    width: 90%;
+    height: auto;
+  }
 }

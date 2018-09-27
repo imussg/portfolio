@@ -5,11 +5,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   /*height: 150px;*/
@@ -23,36 +18,4 @@
 
 .App-intro {
   font-size: large;
-}
-/*
-.about-me-comp {
-  background-color: lightblue;
-}
-
-img {
-  width: 200px;
-  height: 190px;
-  float: left;
-  display: inline;
-  align: left;
-  border: 1px black solid;
-  margin-right: 15px;
-  margin-bottom: 20px;
-}
-
-p.shpeal {
-  display: inline;
-  float: left;
-  margin-left: 20px;
-  margin-right: 20px;
-  max-width: 50%;
-}
-
-h1.about-me-title {
-  text-align: center;
-}*/
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
