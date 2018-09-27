@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
-// import '../App.css';
 import './homepage.css';
 import Aboutme from './about-me';
 import Project from './project-section';
@@ -10,17 +8,17 @@ class Homepage extends Component {
 	render() {
 
 		const gardening = {
-			pic: <img className="project-pic" src="https://cdn.wallpapersafari.com/70/83/irvVAd.jpg"/>,
+			pic: <img className="project-pic" src="https://cdn.wallpapersafari.com/70/83/irvVAd.jpg" alt="gardening-pic"/>,
 			href: 'https://gardening-client.herokuapp.com/',
 			name: 'Gardening App'
 		};
 		const acceptableLosses = {
-			pic: <img className="project-pic" src={require('../acceptablelosses.png')}/>,
+			pic: <img className="project-pic" src={require('../acceptablelosses.png')} alt="acceptable-losses-pic"/>,
 			href: 'https://acceptable-losses-client.herokuapp.com/',
 			name: 'Bill Paying App'
 		};
 		const learnSpanish = {
-			pic: <img className="project-pic" src={require('../spanish-learning.png')}/>,
+			pic: <img className="project-pic" src={require('../spanish-learning.png')} alt="learn-spanish-app-pic"/>,
 			href: 'https://spacedrep-client-brian-steven.herokuapp.com/',
 			name: 'Learn Spanish'
 		};

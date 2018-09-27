@@ -67,7 +67,7 @@ img.about-me-pic {
 
 .projects-list-div {
   width: auto;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .projects-list {
@@ -131,16 +131,16 @@ div.projects div.projects-list-div .project-link:hover {
 ul {
   list-style: none;
   display: block;
-  height: 0%;
   float: left;
+  height: auto;
 }
 
 li {
   width: 30%;
-  height: 100%;
+  height: 90%;
   float: left;
   padding-left: 20px;
-  padding-right: 15px;
+  /*padding-right: 15px;*/
 }
 
 div.about-me-section {

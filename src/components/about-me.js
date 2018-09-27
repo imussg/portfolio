@@ -10,7 +10,7 @@ class Aboutme extends Component {
 					<h1 className="about-me-title">
 						About Me
 					</h1>
-					<img className="about-me-pic"src={picture} />
+					<img className="about-me-pic"src={picture} alt="my-pic"/>
 					<p>In 7th grade I took my first programming class: Visual Basic.  Throughout high school and 
 					college I would continue to take programming classes in a variety of topics and languages,
 					but would eventually graduate with a Philosophy degree from Miami University (Ohio) compelled
