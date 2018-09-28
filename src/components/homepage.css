@@ -1,4 +1,3 @@
-
 #root {
   overflow: auto;
 }
@@ -114,27 +113,22 @@ img.project-pic {
   text-shadow: 1px 1px black;
   transition: color 1s;
 }
-
 a {
   text-decoration: none;
 }
-
 div.projects:hover div.projects-list-div .project-link {
   color: #00ff00;
   transition: color .5s;
 }
-
 div.projects div.projects-list-div .project-link:hover {
   color: #ffe200;
 }
-
 ul {
   list-style: none;
   display: block;
   float: left;
   height: auto;
 }
-
 li {
   width: 30%;
   height: 90%;
@@ -142,11 +136,9 @@ li {
   padding-left: 20px;
   /*padding-right: 15px;*/
 }
-
 div.about-me-section {
   overflow: auto;
 }
-
 .about-me-comp {
   display: inline;
   float: left;
@@ -156,82 +148,101 @@ div.about-me-section {
   color: black;
   transition: color 1s;
 }
-
 .about-me-comp:hover {
   color: white;
 }
-
 .about-me-comp a {
   color: #5252d5;
   transition: color 1s;
 }
-
 .about-me-comp:hover a {
   color: #00ff00;
   transition: color .5s;
 }
-
 .about-me-comp a:hover {
   color: #ffe200;
 }
-
 h1.about-me-title {
   text-align: center;
 }
-
 span {
   font-size: 2em;
 }
-
 span.code-name {
   color: white;
   transition: color 1s;
 }
-
 span.code-name:hover {
   color: #00ff00;
 }
-
 span.code-white {
   color: white;
 }
-
 span.code-red {
   color: #bb4060;
 }
-
 span.code-blue {
   color: #64c8e9;
 }
-
 .projects-title span.code-white {
   color: #00ff00;
   transition: color 1s;
 }
-
 .projects-title span.code-white:hover {
   color: white;
 }
-
 span.code-green {
   color: #00ff00;
 }
-
 img.project-pic:hover, span.code-green:hover {
   background-color: rgba(34, 34, 34, .8);
 }
-
+@media only screen and (max-width: 1160px) {
+  /*.project-container {
+    height: 220px;
+    width: 220px;
+  }*/
+  ul {
+    display: block;
+    clear: both;
+    width: 100%;
+    padding-left: 10px;
+  }
+  li.project {
+    padding-left: 0px;
+    display: block;
+    width: 30%;
+    height: 260px;
+    margin-right: 10px;
+  }
+  .project-container {
+    height: 100%;
+    width: 100%;
+  }
+  img.project-pic {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  li.project {
+    width: 100%;
+    height: 230px;
+  }
+  .project-container {
+    width: 330px;
+    margin: auto;
+  }
+}
 @media only screen and (max-width: 640px) {
   ul {
     padding-left: auto;
   }
   li {
-    width: 100%;
+    width: 70%;
     padding: 0;
   }
   .project-container {
-    height: 240px;
-    width: 240px;
+    width: 80%;
   }
   .app-page {
     width: 100%;
