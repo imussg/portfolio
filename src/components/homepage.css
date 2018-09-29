@@ -197,6 +197,11 @@ span.code-green {
 img.project-pic:hover, span.code-green:hover {
   background-color: rgba(34, 34, 34, .8);
 }
+@media only screen and (max-width: 1290px) {
+  ul {
+    padding: 0;
+  }
+}
 @media only screen and (max-width: 1160px) {
   /*.project-container {
     height: 220px;
