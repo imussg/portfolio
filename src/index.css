@@ -4,4 +4,5 @@ body {
   font-family: "Times New Roman", Times, serif;
   background-color: lightblue;
   /*background-image: linear-gradient(to bottom right, #31da31, #5252d5);*/
+  background-image: linear-gradient(lightblue, #6fe56f, #db93db);
 }
