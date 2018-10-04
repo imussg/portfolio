@@ -8,17 +8,17 @@ class Homepage extends Component {
 	render() {
 
 		const gardening = {
-			pic: <img className="project-pic" src="https://cdn.wallpapersafari.com/70/83/irvVAd.jpg" alt="gardening-pic"/>,
+			pic: <img className="project-pic" src={require('../gardening-app-shots/gardening-full.png')} alt="gardening-pic"/>,
 			href: 'https://gardening-client.herokuapp.com/',
 			name: 'Gardening App'
 		};
 		const acceptableLosses = {
-			pic: <img className="project-pic" src={require('../acceptablelosses.png')} alt="acceptable-losses-pic"/>,
+			pic: <img className="project-pic" src={require('../bill-app-shots/acceptablelosses.png')} alt="acceptable-losses-pic"/>,
 			href: 'https://acceptable-losses-client.herokuapp.com/',
 			name: 'Bill Paying App'
 		};
 		const learnSpanish = {
-			pic: <img className="project-pic" src={require('../spanish-learning.png')} alt="learn-spanish-app-pic"/>,
+			pic: <img className="project-pic" src={require('../spanish-app-shots/spanish-learning.png')} alt="learn-spanish-app-pic"/>,
 			href: 'https://spacedrep-client-brian-steven.herokuapp.com/',
 			name: 'Learn Spanish'
 		};
@@ -35,9 +35,8 @@ class Homepage extends Component {
 
 				<header className="projects-header">
 					<h1 className="projects-title">
-						<span className="code-white">Full Stack Projects</span>
+						Full Stack Projects
 					</h1>
-					<h3 className="projects-subtitle"><span className="code-white">All projects fully implemented with server, client, and database logic</span></h3>
 				</header>
 				<div className="projects-list-div">
 					<ul className="projects-list">
