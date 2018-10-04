@@ -10,17 +10,20 @@ class Homepage extends Component {
 		const gardening = {
 			pic: <img className="project-pic" src={require('../gardening-app-shots/gardening-full.png')} alt="gardening-pic"/>,
 			href: 'https://gardening-client.herokuapp.com/',
-			name: 'Gardening App'
+			name: 'Gardening App',
+			short: 'Organize and track your veggies as they grow'
 		};
 		const acceptableLosses = {
 			pic: <img className="project-pic" src={require('../bill-app-shots/acceptablelosses.png')} alt="acceptable-losses-pic"/>,
 			href: 'https://acceptable-losses-client.herokuapp.com/',
-			name: 'Bill Paying App'
+			name: 'Bill Paying App',
+			short: 'Track all of your recurring or one time bills in one app'
 		};
 		const learnSpanish = {
 			pic: <img className="project-pic" src={require('../spanish-app-shots/spanish-learning.png')} alt="learn-spanish-app-pic"/>,
 			href: 'https://spacedrep-client-brian-steven.herokuapp.com/',
-			name: 'Learn Spanish'
+			name: 'Learn Spanish',
+			short: 'Implementation of the spaced repetition learning process in a spanish learning app'
 		};
 
 		return (
@@ -41,15 +44,33 @@ class Homepage extends Component {
 				<div className="projects-list-div">
 					<ul className="projects-list">
 						<li className="project">
-							<Project picture={gardening.pic} name={gardening.name} href={gardening.href} />
+							<Project 
+								picture={gardening.pic} 
+								name={gardening.name} 
+								href={gardening.href} 
+								short={gardening.short}
+								expanded={false} />
 						</li>
 						<li className="project">
-							<Project picture={acceptableLosses.pic} name={acceptableLosses.name} href={acceptableLosses.href} />
+							<Project
+								picture={acceptableLosses.pic} 
+								name={acceptableLosses.name} 
+								href={acceptableLosses.href} 
+								short={acceptableLosses.short}
+								expanded={false}  />
 						</li>
 						<li className="project">
-							<Project picture={learnSpanish.pic} name={learnSpanish.name} href={learnSpanish.href} />
+							<Project 
+								picture={learnSpanish.pic} 
+								name={learnSpanish.name} 
+								href={learnSpanish.href} 
+								short={learnSpanish.short}
+								expanded={false} />
 						</li>
 					</ul>
+				</div>
+				<div className="project-expanded">
+
 				</div>
 			</div>
 			<div className="about-me-section">
