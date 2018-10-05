@@ -8,17 +8,18 @@ class Homepage extends Component {
 	render() {
 
 		const gardening = {
-			pic: <img className="project-pic" src={require('../gardening-app-shots/gardening-full.png')} alt="gardening-pic"/>,
+			pic: <img className="project-pic" id={"garden-full-pic"} src={require('../gardening-app-shots/gardening-full.png')} alt="gardening-pic"/>,
 			href: 'https://gardening-client.herokuapp.com/',
 			name: 'Gardening App',
 			short: 'Organize and track your veggies as they grow',
-			pic2: <img className="project-pic" src={require('../gardening-app-shots/start-pic.png')} alt="gardening-pic-start"/>,
+			pic2: <img className="project-pic" id={"garden-start-pic"} src={require('../gardening-app-shots/start-pic.png')} alt="gardening-pic-start"/>,
+			pic3: <img className="project-pic" id={"garden-chosen-pic"} src={require('../gardening-app-shots/garden-chosen.png')} alt="gardening-pic-chosen"/>,
 			techStack: ["Node", "Mongoose", "MongoDB", "Express", "ReactJS", "Redux"],
 			long: (`While growing vegetables some succeed and some wither.  In an effort to track 
 				data and results of my garden over time, I created this app to separate veggies into plots,
 				and track data on those vegetables over time.  To start, use the garden "Imus Garden" to see a complete garden.`)
 		};
-		gardening.images = [gardening.pic, gardening.pic2];
+		gardening.images = [gardening.pic, gardening.pic2, gardening.pic3];
 		const acceptableLosses = {
 			pic: <img className="project-pic" src={require('../bill-app-shots/acceptablelosses.png')} alt="acceptable-losses-pic"/>,
 			href: 'https://acceptable-losses-client.herokuapp.com/',
@@ -94,7 +95,7 @@ class Homepage extends Component {
 						href={gardening.href} 
 						short={gardening.short}
 						expanded={true} 
-						images={[gardening.pic, gardening.pic2]}
+						images={[...gardening.images]}
 					/>
 				</div>
 			</div>

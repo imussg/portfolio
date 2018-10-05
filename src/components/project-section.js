@@ -65,7 +65,7 @@ export default class Project extends Component {
 
 				return (
 					<div className="project-container-expanded">
-						<div className="project-screenshots">
+						<div className="project-screenshots" id={"screenshots-id-" + this.state.pos}>
 							{this.state.currentPic}
 						</div>
 					</div>

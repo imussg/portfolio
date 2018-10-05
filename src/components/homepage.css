@@ -84,7 +84,29 @@ img.about-me-pic {
   height: 300px;
 }
 
-img.project-pic {
+.project-screenshots {
+  position: relative;
+  text-align: left;
+  width: 400px;
+  height: 400px;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.project-screenshots img {
+  width: 100%;
+  height: 95%;
+}
+
+#garden-chosen-pic, #garden-start-pic, #garden-full-pic {
+  animation-name: fadein;
+  animation-duration: 2s;
+}
+
+.project-container img.project-pic {
   width: 100%;
   height: 95%;
   overflow: hidden;
