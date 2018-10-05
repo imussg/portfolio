@@ -8,13 +8,41 @@ export default class Project extends Component {
 		this.state = {
 			...props,
 			currentPic: props.picture,
-			pos: 0
+			pos: 0,
+			timer: null
 		};
+		console.log(this.state);
 	}
 
 	componentDidMount() {
-		console.log(this.state);
-		setInterval(this.getNextImage, 3000);
+		if(this.state.expanded) {
+			// console.log(this.state);
+			let timer  = setInterval(this.getNextImage.bind(this), 3000);
+			this.setState({timer: timer});
+		}
+	}
+
+	componentWillUnmount() {
+		if(this.state.expanded) {
+			this.clearInterval(this.state.timer);
+		}
+	}
+
+	getNextImage() {
+		// console.log(this.state);
+		// console.log("in get next image");
+		// if(this.state) {
+			console.log(this.state);
+			let currentPos = this.state.pos + 1;
+			if(currentPos >= this.state.images.length) {
+				currentPos = 0;
+			}
+			
+			this.setState({
+				currentPic: this.state.images[currentPos],
+				pos: currentPos
+			});
+		// }
 	}
 
 	render() {
@@ -31,9 +59,9 @@ export default class Project extends Component {
 			);
 		} else {
 			if(this.state.images) {
-				// console.log("in here");
-				let currentPos = 0;
-				let images = [this.state.picture, this.state.picture2];
+				console.log(this.state.currentPic);
+				// let currentPos = 0;
+				// let images = [this.state.picture, this.state.picture2];
 
 				return (
 					<div className="project-container-expanded">
@@ -43,21 +71,6 @@ export default class Project extends Component {
 					</div>
 				);
 			}
-		}
-	}
-
-	getNextImage() {
-		console.log("in here");
-		if(this.state) {
-			let currentPos = this.state.pos + 1;
-			if(currentPos >= this.state.images.length) {
-				currentPos = 0;
-			}
-			console.log(currentPos);
-			this.setState = {
-				currentPic: this.state.images[currentPos],
-				pos: currentPos
-			};
 		}
 	}
 }
