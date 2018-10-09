@@ -84,11 +84,70 @@ img.about-me-pic {
   height: 300px;
 }
 
+.projects {
+  color: white;
+}
+
+.project {
+  width: 30%;
+  text-align: center;
+  font-size: .7em;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+#gardening-brief {
+  background-color: #2B813E;
+  transition: background-color .3s;
+}
+
+#gardening-brief:hover {
+  background-color: #18e946;
+}
+
+span.project-hidden-title {
+  font-size: 2em;
+}
+
+span.project-hidden-desc {
+  display: block;
+  font-size: 1.5em;
+}
+/*p.project-hidden-brief {
+  background-color: #15a534;
+}*/
+
+#acceptable-losses-brief {
+  background-color: #303E73;
+  transition: background-color .3s;
+}
+
+#acceptable-losses-brief:hover {
+  background-color: #6c83dd;
+}
+
+#learning-brief {
+  background-color: #0F454F;
+  transition: background-color .3s;
+}
+
+#learning-brief:hover {
+  background-color: #119cb6;
+}
+img.project-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.project-expanded {
+  padding: 30px;
+}
+
 .project-screenshots {
   position: relative;
   text-align: left;
-  width: 400px;
-  height: 400px;
+  width: 380px;
+  height: 310px;
 }
 
 @keyframes fadein {
@@ -185,6 +244,9 @@ div.about-me-section {
   color: #ffe200;
 }
 h1.about-me-title {
+  text-align: center;
+}
+h1.projects-title {
   text-align: center;
 }
 span {

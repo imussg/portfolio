@@ -11,7 +11,6 @@ export default class Project extends Component {
 			pos: 0,
 			timer: null
 		};
-		console.log(this.state);
 	}
 
 	componentDidMount() {
@@ -29,44 +28,41 @@ export default class Project extends Component {
 	}
 
 	getNextImage() {
-		// console.log(this.state);
-		// console.log("in get next image");
-		// if(this.state) {
-			console.log(this.state);
-			let currentPos = this.state.pos + 1;
-			if(currentPos >= this.state.images.length) {
-				currentPos = 0;
-			}
-			
-			this.setState({
-				currentPic: this.state.images[currentPos],
-				pos: currentPos
-			});
-		// }
+		let currentPos = this.state.pos + 1;
+		if(currentPos >= this.state.images.length) {
+			currentPos = 0;
+		}
+		
+		this.setState({
+			currentPic: this.state.images[currentPos],
+			pos: currentPos
+		});
 	}
 
 	render() {
 		if(!this.state.expanded) {
 			return (
-				<div className="project-container">
+				<div className="project-brief" id={this.state.name}>
+					{this.state.name}
+				</div>);
+				/*<div className="project-container">
 					{this.state.picture}
 					<a className="project-link" href={this.state.href}>{this.state.name}</a>
 					<figcaption>
 						<p className="project-name">{this.state.name}</p>
 						<p className="project-short-desc">{this.state.short}</p>
 					</figcaption>
-				</div>
-			);
+				</div>*/
 		} else {
 			if(this.state.images) {
-				console.log(this.state.currentPic);
+				// console.log(this.state.currentPic);
 				// let currentPos = 0;
 				// let images = [this.state.picture, this.state.picture2];
 
 				return (
 					<div className="project-container-expanded">
 						<div className="project-screenshots" id={"screenshots-id-" + this.state.pos}>
-							{this.state.currentPic}
+							<a href={this.state.href} className="project-link">{this.state.currentPic}</a>
 						</div>
 					</div>
 				);

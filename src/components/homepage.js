@@ -5,9 +5,17 @@ import Project from './project-section';
 
 class Homepage extends Component {
 
-	render() {
-
-		const gardening = {
+	constructor(props) {
+		super(props);
+		this.state = {
+			...props,
+			hiddeng: true,
+			hiddena: true,
+			hiddenl: true,
+			currentProject: "Click on an icon to see a project"
+		};
+		this.gardening = {
+			icon: <img className="project-icon" src={require('../gardening-app-shots/gardening-icon.png')} alt="gardening-icon"/>,
 			pic: <img className="project-pic" id={"garden-full-pic"} src={require('../gardening-app-shots/gardening-full.png')} alt="gardening-pic"/>,
 			href: 'https://gardening-client.herokuapp.com/',
 			name: 'Gardening App',
@@ -19,8 +27,8 @@ class Homepage extends Component {
 				data and results of my garden over time, I created this app to separate veggies into plots,
 				and track data on those vegetables over time.  To start, use the garden "Imus Garden" to see a complete garden.`)
 		};
-		gardening.images = [gardening.pic, gardening.pic2, gardening.pic3];
-		const acceptableLosses = {
+		this.acceptableLosses = {
+			icon: <img className="project-icon" src={require('../bill-app-shots/bills-icon.png')} alt="acceptable-losses-icon"/>,
 			pic: <img className="project-pic" src={require('../bill-app-shots/acceptablelosses.png')} alt="acceptable-losses-pic"/>,
 			href: 'https://acceptable-losses-client.herokuapp.com/',
 			name: 'Bill Paying App',
@@ -32,8 +40,8 @@ class Homepage extends Component {
 				My partners and I created this app to create reminders, record bill schedules on a calendar, and link directly to 
 				pay the bill directly.`
 		};
-		acceptableLosses.images = [acceptableLosses.pic, acceptableLosses.pic2, acceptableLosses.pic3];
-		const learnSpanish = {
+		this.learnSpanish = {
+			icon: <img className="project-icon" src={require('../spanish-app-shots/spanish-learning-icon.png')} alt="learn-spanish-app-icon"/>,
 			pic: <img className="project-pic" src={require('../spanish-app-shots/spanish-learning.png')} alt="learn-spanish-app-pic"/>,
 			href: 'https://spacedrep-client-brian-steven.herokuapp.com/',
 			name: 'Learn Spanish',
@@ -43,60 +51,130 @@ class Homepage extends Component {
 				meant for memorization.  This app is an implementation of the spaced repitition learning system in the form of a 
 				spanish learning notecard app.  To try, simply make an account and try and answer the questions!`
 		};
-		learnSpanish.images = [learnSpanish.pic];
+	}
 
+	showGardeningBrief() {
+		this.setState({
+			hiddeng: !this.state.hiddeng
+		});
+	}
+
+	showAcceptableLossesBrief() {
+		this.setState({
+			hiddena: !this.state.hiddena
+		});
+	}
+
+	showLearnSpanishBrief() {
+		this.setState({
+			hiddenl: !this.state.hiddenl
+		});
+	}
+
+	gardenClick() {
+		this.gardening.images = [this.gardening.pic, this.gardening.pic2, this.gardening.pic3];
+		const garden = (<Project 
+			picture={this.gardening.pic} 
+			name={this.gardening.name} 
+			href={this.gardening.href} 
+			short={this.gardening.short}
+			expanded={true} 
+			images={[...this.gardening.images]}
+		/>);
+		this.setState({
+			currentProject: garden
+		});
+	}
+
+	billClick() {
+		this.acceptableLosses.images = [this.acceptableLosses.pic, this.acceptableLosses.pic2, this.acceptableLosses.pic3];
+		const bill = (<Project 
+			picture={this.acceptableLosses.pic} 
+			name={this.acceptableLosses.name} 
+			href={this.acceptableLosses.href} 
+			short={this.acceptableLosses.short}
+			expanded={true} 
+			images={[...this.acceptableLosses.images]}
+		/>);
+		this.setState({
+			currentProject: bill
+		});
+	}
+
+	learnClick() {
+		this.learnSpanish.images = [this.learnSpanish.pic];
+		const learn = (<Project 
+			picture={this.learnSpanish.pic} 
+			name={this.learnSpanish.name} 
+			href={this.learnSpanish.href} 
+			short={this.learnSpanish.short}
+			expanded={true} 
+			images={[...this.learnSpanish.images]}
+		/>);
+		this.setState({
+			currentProject: learn
+		});
+	}
+
+	render() {
+/*
+<span className="project-brief">Gardening App</span>
+<span className="project-brief">Acceptable Losses</span>
+<span className="project-brief">Learn Spanish</span>
+*/
 		return (
 		<div className="app-page">
 			<div className="intro">
 				<header className="intro-header">
 					<h1 className="intro-title"><span className="code-name">Steven Imus</span></h1>
-					<h5 className="intro-subtitle"><span className="code-blue">Software Developer </span><span className="code-red">for</span><span className="code-blue"> Node</span><span className="code-white">, </span><span className="code-blue">React</span><span className="code-white">,</span><span className="code-blue"> SQL</span></h5>
+					<h5 className="intro-subtitle"><span className="code-white">Full Stack Developer</span></h5>
 				</header>
 			</div>
 			<div className="projects">
-
 				<header className="projects-header">
 					<h1 className="projects-title">
-						Full Stack Projects
+						Projects
 					</h1>
 				</header>
 				<div className="projects-list-div">
 					<ul className="projects-list">
-						<li className="project">
-							<Project 
-								picture={gardening.pic} 
-								name={gardening.name} 
-								href={gardening.href} 
-								short={gardening.short}
-								expanded={false} />
+						<li className="project" id="gardening-brief" onClick={()=>this.gardenClick()} onMouseEnter={() => this.showGardeningBrief()} onMouseLeave={() => this.showGardeningBrief()}>
+							{this.gardening.icon}
+							<p className="project-hidden-brief" hidden={this.state.hiddeng}>
+								<span className="project-hidden-title">
+									{this.gardening.name}
+								</span>
+								<span className="project-hidden-desc">
+									{this.gardening.short}
+								</span>
+							</p>
 						</li>
-						<li className="project">
-							<Project
-								picture={acceptableLosses.pic} 
-								name={acceptableLosses.name} 
-								href={acceptableLosses.href} 
-								short={acceptableLosses.short}
-								expanded={false}  />
+						<li className="project" id="acceptable-losses-brief" onClick={()=>this.billClick()} onMouseEnter={() => this.showAcceptableLossesBrief()} onMouseLeave={()=>this.showAcceptableLossesBrief()}>
+							{this.acceptableLosses.icon}
+							<p className="project-hidden-brief" hidden={this.state.hiddena}>
+								<span className="project-hidden-title">
+									{this.acceptableLosses.name}
+								</span>
+								<span className="project-hidden-desc">
+									{this.acceptableLosses.short}
+								</span>
+							</p>
 						</li>
-						<li className="project">
-							<Project 
-								picture={learnSpanish.pic} 
-								name={learnSpanish.name} 
-								href={learnSpanish.href} 
-								short={learnSpanish.short}
-								expanded={false} />
+						<li className="project" id="learning-brief" onClick={()=>this.learnClick()} onMouseEnter={() => this.showLearnSpanishBrief()} onMouseLeave={()=>this.showLearnSpanishBrief()}>
+							{this.learnSpanish.icon}
+							<p className="project-hidden-brief" hidden={this.state.hiddenl}>
+								<span className="project-hidden-title">
+									{this.learnSpanish.name}
+								</span>
+								<span className="project-hidden-desc">
+									{this.learnSpanish.short}
+								</span>
+							</p>
 						</li>
 					</ul>
 				</div>
 				<div className="project-expanded">
-					<Project 
-						picture={gardening.pic} 
-						name={gardening.name} 
-						href={gardening.href} 
-						short={gardening.short}
-						expanded={true} 
-						images={[...gardening.images]}
-					/>
+					{this.state.currentProject}
 				</div>
 			</div>
 			<div className="about-me-section">
@@ -106,5 +184,26 @@ class Homepage extends Component {
 		);
 	}
 }
+
+/*
+<Project 
+picture={gardening.pic} 
+name={gardening.name} 
+href={gardening.href} 
+short={gardening.short}
+expanded={false} />
+<Project
+picture={acceptableLosses.pic} 
+name={acceptableLosses.name} 
+href={acceptableLosses.href} 
+short={acceptableLosses.short}
+expanded={false}  />
+<Project 
+picture={learnSpanish.pic} 
+name={learnSpanish.name} 
+href={learnSpanish.href} 
+short={learnSpanish.short}
+expanded={false} />
+*/
 
 export default Homepage;
