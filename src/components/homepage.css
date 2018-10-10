@@ -377,8 +377,9 @@ span.code-green {
     width: 100%;
   }
   img.project-pic {
-    margin: 0px;
+    /*margin: 0px;*/
     max-width: 100%;
+    /*display: block;*/
   }
 }
 @media only screen and (max-width: 930px) {
@@ -387,7 +388,7 @@ span.code-green {
     height: 230px;
   }
   .project-container {
-    width: 330px;
+    width: 80%;
     margin: auto;
   }
   div.project-screenshots {
