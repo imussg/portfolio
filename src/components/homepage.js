@@ -24,7 +24,7 @@ class Homepage extends Component {
 			short: 'Organize and track your veggies as they grow',
 			pic2: <img className="project-pic" id={"garden-start-pic"} src={require('../gardening-app-shots/start-pic.png')} alt="gardening-pic-start"/>,
 			pic3: <img className="project-pic" id={"garden-chosen-pic"} src={require('../gardening-app-shots/garden-chosen.png')} alt="gardening-pic-chosen"/>,
-			techStack: ["Node", "Mongoose", "MongoDB", "Express", "ReactJS", "Redux"],
+			techStack: "Node, Mongoose, MongoDB, Express, ReactJS, and Redux",
 			long: (`While growing vegetables some succeed and some wither.  In an effort to track 
 				data and results of my garden over time, I created this app to separate veggies into plots,
 				and track data on those vegetables over time.  To start, use the garden "Imus Garden" to see a complete garden.`)
@@ -38,7 +38,7 @@ class Homepage extends Component {
 			short: 'Track all of your recurring or one time bills in one app',
 			pic2: <img className="project-pic" src={require('../bill-app-shots/landing1.png')} alt="acceptable-losses-pic"/>,
 			pic3: <img className="project-pic" src={require('../bill-app-shots/landing2.png')} alt="acceptable-losses-pic"/>,
-			techStack: ["Node", "Mongoose", "MongoDB", "Express", "ReactJS", "Redux"],
+			techStack: "Node, Mongoose, MongoDB, Express, ReactJS, and Redux",
 			long: `With automatic bill payment it's sometimes easy to forget when exactly bills are due and on what schedule.
 				My partners and I created this app to create reminders, record bill schedules on a calendar, and link directly to 
 				pay the bill directly.`
@@ -50,7 +50,7 @@ class Homepage extends Component {
 			href: 'https://spacedrep-client-brian-steven.herokuapp.com/',
 			name: 'Learn Spanish',
 			short: 'Implementation of the spaced repetition learning process in a spanish learning app',
-			techStack: ["Node", "Mongoose", "MongoDB", "Express", "ReactJS", "Redux"],
+			techStack: "Node, Mongoose, MongoDB, Express, ReactJS, and Redux",
 			long: `The spaced repitition system of learning has been shown through various studies to efficiently learn material
 				meant for memorization.  This app is an implementation of the spaced repitition learning system in the form of a 
 				spanish learning notecard app.  To try, simply make an account and try and answer the questions!`
@@ -163,7 +163,9 @@ class Homepage extends Component {
 							picture={this.gardening.pic} 
 							name={this.gardening.name} 
 							href={this.gardening.href} 
-							short={this.gardening.short}
+							short={this.gardening.short} 
+							long={this.gardening.long} 
+							techStack={this.gardening.techStack} 
 							expanded={true} 
 							images={[...this.gardening.images]}
 						/>
@@ -173,7 +175,9 @@ class Homepage extends Component {
 							picture={this.acceptableLosses.pic} 
 							name={this.acceptableLosses.name} 
 							href={this.acceptableLosses.href} 
-							short={this.acceptableLosses.short}
+							short={this.acceptableLosses.short} 
+							long={this.acceptableLosses.long} 
+							techStack={this.acceptableLosses.techStack} 
 							expanded={true} 
 							images={[...this.acceptableLosses.images]}
 						/>
@@ -183,7 +187,9 @@ class Homepage extends Component {
 							picture={this.learnSpanish.pic} 
 							name={this.learnSpanish.name} 
 							href={this.learnSpanish.href} 
-							short={this.learnSpanish.short}
+							short={this.learnSpanish.short} 
+							long={this.learnSpanish.long} 
+							techStack={this.learnSpanish.techStack} 
 							expanded={true} 
 							images={[...this.learnSpanish.images]}
 						/>

@@ -64,6 +64,12 @@ export default class Project extends Component {
 						<div className="project-screenshots" id={"screenshots-id-" + this.state.pos}>
 							<a href={this.state.href} className="project-link">{this.state.currentPic}</a>
 						</div>
+						<div className="project-information">
+							<h1 className="project-expanded-title">{this.state.name}</h1>
+							<h5 className="project-expanded-subtitle">{this.state.short}</h5>
+							<p className="project-expanded-long">{this.state.long}</p>
+							<p className="project-expanded-techstack">Tech Stack: {this.state.techStack}</p>
+						</div>
 					</div>
 				);
 			}
