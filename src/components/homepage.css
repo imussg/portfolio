@@ -236,6 +236,9 @@ img.project-pic {
 a {
   text-decoration: none;
 }
+p.project-expanded-github {
+  padding-bottom: 25px;
+}
 p.project-expanded-github a {
   color: #00ff00;
   margin: 10px;
@@ -243,6 +246,13 @@ p.project-expanded-github a {
 }
 p.project-expanded-github a:hover {
   color: white;
+}
+a.project-link-button {
+  /*border: 1px solid white;*/
+  background-color: #2B813E;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
 }
 
 /*a {
