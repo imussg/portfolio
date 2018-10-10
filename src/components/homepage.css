@@ -378,7 +378,7 @@ span.code-green {
   }
   img.project-pic {
     /*margin: 0px;*/
-    max-width: 100%;
+    max-width: 60%;
     /*display: block;*/
   }
 }
@@ -404,6 +404,19 @@ span.code-green {
     margin: auto;
     width: 50%;
     text-align: center;
+  }
+  .about-me-comp {
+    max-width: 100%;
+  }
+  img.about-me-pic {
+    display: block;
+    margin: 15px;
+    width: 90%;
+    height: auto;
+    float: none;
+  }
+  .self-desc {
+    display: block;
   }
 }
 @media only screen and (max-width: 640px) {
