@@ -138,9 +138,12 @@ img.project-icon {
   width: 100px;
   height: 100px;
 }
-
+div.projects-list-div {
+  margin: 30px;
+}
 .project-expanded {
   padding: 30px;
+  margin: 15px;
 }
 
 .project-screenshots {
@@ -151,8 +154,8 @@ img.project-icon {
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { visibility: hidden; }
+  to { visibility: visible; }
 }
 
 .project-screenshots img {
@@ -160,7 +163,7 @@ img.project-icon {
   height: 95%;
 }
 
-#garden-chosen-pic, #garden-start-pic, #garden-full-pic {
+div.hidden-expanded {
   animation-name: fadein;
   animation-duration: 2s;
 }

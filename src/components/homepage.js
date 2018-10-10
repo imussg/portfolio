@@ -12,7 +12,9 @@ class Homepage extends Component {
 			hiddeng: true,
 			hiddena: true,
 			hiddenl: true,
-			currentProject: "Click on an icon to see a project"
+			expandg: true,
+			expandb: true,
+			expandl: true
 		};
 		this.gardening = {
 			icon: <img className="project-icon" src={require('../gardening-app-shots/gardening-icon.png')} alt="gardening-icon"/>,
@@ -27,6 +29,7 @@ class Homepage extends Component {
 				data and results of my garden over time, I created this app to separate veggies into plots,
 				and track data on those vegetables over time.  To start, use the garden "Imus Garden" to see a complete garden.`)
 		};
+		this.gardening.images = [this.gardening.pic, this.gardening.pic2, this.gardening.pic3];
 		this.acceptableLosses = {
 			icon: <img className="project-icon" src={require('../bill-app-shots/bills-icon.png')} alt="acceptable-losses-icon"/>,
 			pic: <img className="project-pic" src={require('../bill-app-shots/acceptablelosses.png')} alt="acceptable-losses-pic"/>,
@@ -40,6 +43,7 @@ class Homepage extends Component {
 				My partners and I created this app to create reminders, record bill schedules on a calendar, and link directly to 
 				pay the bill directly.`
 		};
+		this.acceptableLosses.images = [this.acceptableLosses.pic, this.acceptableLosses.pic2, this.acceptableLosses.pic3];
 		this.learnSpanish = {
 			icon: <img className="project-icon" src={require('../spanish-app-shots/spanish-learning-icon.png')} alt="learn-spanish-app-icon"/>,
 			pic: <img className="project-pic" src={require('../spanish-app-shots/spanish-learning.png')} alt="learn-spanish-app-pic"/>,
@@ -51,6 +55,7 @@ class Homepage extends Component {
 				meant for memorization.  This app is an implementation of the spaced repitition learning system in the form of a 
 				spanish learning notecard app.  To try, simply make an account and try and answer the questions!`
 		};
+		this.learnSpanish.images = [this.learnSpanish.pic];
 	}
 
 	showGardeningBrief() {
@@ -72,56 +77,34 @@ class Homepage extends Component {
 	}
 
 	gardenClick() {
-		this.gardening.images = [this.gardening.pic, this.gardening.pic2, this.gardening.pic3];
-		const garden = (<Project 
-			picture={this.gardening.pic} 
-			name={this.gardening.name} 
-			href={this.gardening.href} 
-			short={this.gardening.short}
-			expanded={true} 
-			images={[...this.gardening.images]}
-		/>);
 		this.setState({
-			currentProject: garden
+			expandg: false,
+			expandb: true,
+			expandl: true
 		});
 	}
 
 	billClick() {
-		this.acceptableLosses.images = [this.acceptableLosses.pic, this.acceptableLosses.pic2, this.acceptableLosses.pic3];
-		const bill = (<Project 
-			picture={this.acceptableLosses.pic} 
-			name={this.acceptableLosses.name} 
-			href={this.acceptableLosses.href} 
-			short={this.acceptableLosses.short}
-			expanded={true} 
-			images={[...this.acceptableLosses.images]}
-		/>);
 		this.setState({
-			currentProject: bill
+			expandb: false,
+			expandg: true,
+			expandl: true
 		});
 	}
 
 	learnClick() {
-		this.learnSpanish.images = [this.learnSpanish.pic];
-		const learn = (<Project 
-			picture={this.learnSpanish.pic} 
-			name={this.learnSpanish.name} 
-			href={this.learnSpanish.href} 
-			short={this.learnSpanish.short}
-			expanded={true} 
-			images={[...this.learnSpanish.images]}
-		/>);
 		this.setState({
-			currentProject: learn
+			expandl: false,
+			expandg: true,
+			expandb: true
 		});
 	}
 
 	render() {
-/*
-<span className="project-brief">Gardening App</span>
-<span className="project-brief">Acceptable Losses</span>
-<span className="project-brief">Learn Spanish</span>
-*/
+		let msg = "";
+		if(this.state.hiddeng&&this.state.hiddena&&this.state.hiddenl&&this.state.expandg&&this.state.expandb&&this.state.expandl) {
+			msg = "Click on an icon to see a project";
+		}
 		return (
 		<div className="app-page">
 			<div className="intro">
@@ -174,6 +157,37 @@ class Homepage extends Component {
 					</ul>
 				</div>
 				<div className="project-expanded">
+					<span id="inst-msg">{msg}</span>
+					<div className="hidden-expanded" id="garden-expanded" hidden={this.state.expandg}>
+						<Project 
+							picture={this.gardening.pic} 
+							name={this.gardening.name} 
+							href={this.gardening.href} 
+							short={this.gardening.short}
+							expanded={true} 
+							images={[...this.gardening.images]}
+						/>
+					</div>
+					<div className="hidden-expanded" id="bills-expanded" hidden={this.state.expandb}>
+						<Project 
+							picture={this.acceptableLosses.pic} 
+							name={this.acceptableLosses.name} 
+							href={this.acceptableLosses.href} 
+							short={this.acceptableLosses.short}
+							expanded={true} 
+							images={[...this.acceptableLosses.images]}
+						/>
+					</div>
+					<div className="hidden-expanded" id="learning-expanded" hidden={this.state.expandl}>
+						<Project 
+							picture={this.learnSpanish.pic} 
+							name={this.learnSpanish.name} 
+							href={this.learnSpanish.href} 
+							short={this.learnSpanish.short}
+							expanded={true} 
+							images={[...this.learnSpanish.images]}
+						/>
+					</div>
 					{this.state.currentProject}
 				</div>
 			</div>
