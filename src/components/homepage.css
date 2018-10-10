@@ -149,6 +149,7 @@ div.projects-list-div {
 .project-expanded {
   padding: 30px;
   margin: 15px;
+  overflow: auto;
 }
 
 /*.project-screenshots {
@@ -170,6 +171,7 @@ div.projects-list-div {
 }*/
 
 div.hidden-expanded {
+  overflow: auto;
   animation-name: fadein;
   animation-duration: 2s;
 }
@@ -239,12 +241,12 @@ a {
 p.project-expanded-github {
   padding-bottom: 25px;
 }
-p.project-expanded-github a {
+a.github-server-link, a.github-client-link {
   color: #00ff00;
   margin: 10px;
   transition: color .5s;
 }
-p.project-expanded-github a:hover {
+a.github-server-link:hover, a.github-client-link:hover {
   color: white;
 }
 a.project-link-button {
@@ -369,8 +371,14 @@ span.code-green {
     height: 100%;
     width: 100%;
   }
+  div.project-screenshots {
+    margin: auto;
+    display: block;
+    width: 100%;
+  }
   img.project-pic {
     margin: 0px;
+    max-width: 100%;
   }
 }
 @media only screen and (max-width: 930px) {
@@ -381,6 +389,20 @@ span.code-green {
   .project-container {
     width: 330px;
     margin: auto;
+  }
+  div.project-screenshots {
+    margin: auto;
+    display: block;
+    width: 100%;
+  }
+  img.project-pic {
+    max-width: 100%;
+  }
+  a.project-link-button {
+    display: block;
+    margin: auto;
+    width: 50%;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -414,6 +436,9 @@ span.code-green {
     object-fit: contain;
     /*max-width: 100%;
     max-height: 100%;*/
+  }
+  p.project-expanded-github * {
+    display: block;
   }
   .app-page {
     width: 100%;

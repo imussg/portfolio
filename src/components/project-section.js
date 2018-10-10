@@ -70,8 +70,8 @@ export default class Project extends Component {
 							<h5 className="project-expanded-subtitle">{this.state.short}</h5>
 							<p className="project-expanded-long">{this.state.long}</p>
 							<p className="project-expanded-techstack">Tech Stack: {this.state.techStack}</p>
-							<p className="project-expanded-github">Github: <a href={this.state.server} className="github-server-link">Server</a> <a href={this.state.client} className="github-client-link">Client</a></p>
-							<a href={this.state.href} className="project-link-button" target="_blank">Visit Site</a>
+							<p className="project-expanded-github">
+								Github: <a href={this.state.server} className="github-server-link">Server</a> <a href={this.state.client} className="github-client-link">Client</a>   <a href={this.state.href} className="project-link-button" target="_blank">Visit Site</a></p>
 						</div>
 					</div>
 				);
