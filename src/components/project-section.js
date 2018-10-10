@@ -63,7 +63,7 @@ export default class Project extends Component {
 				return (
 					<div className="project-container-expanded">
 						<div className="project-screenshots" id={"screenshots-id-" + this.state.pos}>
-							<a href={this.state.href} className="project-link">{this.state.currentPic}</a>
+							<a href={this.state.href} className="project-link" target="_blank">{this.state.currentPic}</a>
 						</div>
 						<div className="project-information">
 							<h1 className="project-expanded-title">{this.state.name}</h1>
