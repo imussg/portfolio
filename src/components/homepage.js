@@ -27,7 +27,11 @@ class Homepage extends Component {
 			techStack: "Node, Mongoose, MongoDB, Express, ReactJS, and Redux",
 			long: (`While growing vegetables some succeed and some wither.  In an effort to track 
 				data and results of my garden over time, I created this app to separate veggies into plots,
-				and track data on those vegetables over time.  To start, use the garden "Imus Garden" to see a complete garden.`)
+				and track data on those vegetables over time.  To start, use the garden "Imus Garden" to see a complete garden.`),
+			github: {
+				client: "https://github.com/imussg/gardening-app-client",
+				server: "https://github.com/imussg/gardening-app-server"
+			}
 		};
 		this.gardening.images = [this.gardening.pic, this.gardening.pic2, this.gardening.pic3];
 		this.acceptableLosses = {
@@ -41,7 +45,11 @@ class Homepage extends Component {
 			techStack: "Node, Mongoose, MongoDB, Express, ReactJS, and Redux",
 			long: `With automatic bill payment it's sometimes easy to forget when exactly bills are due and on what schedule.
 				My partners and I created this app to create reminders, record bill schedules on a calendar, and link directly to 
-				pay the bill directly.`
+				pay the bill directly.`,
+			github: {
+				client: "https://github.com/thinkful-ei21/acceptable-losses-client",
+				server: "https://github.com/thinkful-ei21/acceptable-losses-server"
+			}
 		};
 		this.acceptableLosses.images = [this.acceptableLosses.pic, this.acceptableLosses.pic2, this.acceptableLosses.pic3];
 		this.learnSpanish = {
@@ -53,7 +61,11 @@ class Homepage extends Component {
 			techStack: "Node, Mongoose, MongoDB, Express, ReactJS, and Redux",
 			long: `The spaced repitition system of learning has been shown through various studies to efficiently learn material
 				meant for memorization.  This app is an implementation of the spaced repitition learning system in the form of a 
-				spanish learning notecard app.  To try, simply make an account and try and answer the questions!`
+				spanish learning notecard app.  To try, simply make an account and try and answer the questions!`,
+			github: {
+				client: "https://github.com/thinkful-ei21/space-rep-client-brian-steven",
+				server: "https://github.com/thinkful-ei21/space-rep-server-brian-steven"
+			}
 		};
 		this.learnSpanish.images = [this.learnSpanish.pic];
 	}
@@ -168,6 +180,8 @@ class Homepage extends Component {
 							techStack={this.gardening.techStack} 
 							expanded={true} 
 							images={[...this.gardening.images]}
+							server={this.gardening.github.server}
+							client={this.gardening.github.client}
 						/>
 					</div>
 					<div className="hidden-expanded" id="bills-expanded" hidden={this.state.expandb}>
@@ -180,6 +194,8 @@ class Homepage extends Component {
 							techStack={this.acceptableLosses.techStack} 
 							expanded={true} 
 							images={[...this.acceptableLosses.images]}
+							server={this.acceptableLosses.github.server} 
+							client={this.acceptableLosses.github.client}
 						/>
 					</div>
 					<div className="hidden-expanded" id="learning-expanded" hidden={this.state.expandl}>
@@ -192,6 +208,8 @@ class Homepage extends Component {
 							techStack={this.learnSpanish.techStack} 
 							expanded={true} 
 							images={[...this.learnSpanish.images]}
+							server={this.learnSpanish.github.server} 
+							client={this.learnSpanish.github.client}
 						/>
 					</div>
 					{this.state.currentProject}

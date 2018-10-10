@@ -55,6 +55,7 @@ export default class Project extends Component {
 				</div>*/
 		} else {
 			if(this.state.images) {
+				console.log({...this.state});
 				// console.log(this.state.currentPic);
 				// let currentPos = 0;
 				// let images = [this.state.picture, this.state.picture2];
@@ -69,6 +70,7 @@ export default class Project extends Component {
 							<h5 className="project-expanded-subtitle">{this.state.short}</h5>
 							<p className="project-expanded-long">{this.state.long}</p>
 							<p className="project-expanded-techstack">Tech Stack: {this.state.techStack}</p>
+							<p className="project-expanded-github">Github: <a href={this.state.server} className="github-server-link">Server</a> <a href={this.state.client} className="github-client-link">Client</a></p>
 						</div>
 					</div>
 				);

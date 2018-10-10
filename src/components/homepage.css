@@ -233,6 +233,18 @@ img.project-pic {
 .project-expanded-long, .project-expanded-techstack {
   font-size: .9em;
 }
+a {
+  text-decoration: none;
+}
+p.project-expanded-github a {
+  color: #00ff00;
+  margin: 10px;
+  transition: color .5s;
+}
+p.project-expanded-github a:hover {
+  color: white;
+}
+
 /*a {
   text-decoration: none;
 }*/
